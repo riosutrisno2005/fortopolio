@@ -401,7 +401,7 @@
 
 <nav class="navbar">
   <div class="container nav-flex">
-    <div class="logo"><a href="#">RIO<span style="color:#2563eb;">.dev</span></a></div>
+    <div class="logo"><a href="#">RIO<span style="color:#2563eb;"> SUTRISNO</span></a></div>
     <ul class="nav-links">
       <li><a href="#home">Beranda</a></li>
       <li><a href="#about">Tentang</a></li>
@@ -517,7 +517,7 @@
       <h2 class="section-title">Hubungi Saya</h2>
       <div class="contact-wrapper">
         <div class="contact-info">
-          <h3>Mari Berdiskusi 🤝</h3>
+          <h3>Mari Bersilahturahmi</h3>
           <p style="margin-bottom: 20px; color:#334155; font-size:0.9rem;">Isi form di samping, pesan Anda akan langsung masuk ke WhatsApp saya.</p>
           <div class="contact-item">
             <i class="fab fa-whatsapp"></i>
@@ -561,7 +561,7 @@
 <script>
   // ========== GANTI targetNumber DENGAN NOMOR WHATSAPP RIO ==========
   // Silakan sesuaikan dengan nomor WhatsApp asli (format 62xxx tanpa tanda +)
-  let targetNumber = "6282271890000";  // GANTI DENGAN NOMOR WA RIO
+  let targetNumber = "6281264662139";  // GANTI DENGAN NOMOR WA RIO
 
   const form = document.getElementById('waContactForm');
   const notif = document.getElementById('formNotif');
@@ -582,7 +582,7 @@
     
     let waText = `Halo Kak Rio Sutrisno,%0A%0A*Nama:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email || 'tidak diisi')}%0A*Pesan:* ${encodeURIComponent(message)}%0A%0A-- Dikirim dari Portofolio Web --`;
     
-    if (!targetNumber || targetNumber.length < 9 || targetNumber === "6282271890000") {
+    if (!targetNumber || targetNumber.length < 9 || targetNumber === "6281264662139") {
       notif.innerHTML = '⚠️ Harap perbarui nomor WhatsApp di kode (targetNumber) agar pesan terkirim ke Anda.';
       notif.style.color = '#b91c1c';
       const waLink = `https://wa.me/${targetNumber}?text=${waText}`;

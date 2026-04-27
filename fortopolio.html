@@ -137,8 +137,6 @@
       width: 100%;
     }
 
-    /* badge dihapus sesuai permintaan */
-
     .hero-content h1 {
       font-size: 2.2rem;
       font-weight: 800;
@@ -167,6 +165,7 @@
       flex-wrap: wrap;
     }
 
+    /* AVATAR dengan gambar profil */
     .avatar-circle {
       background: linear-gradient(145deg, #ffffff, #eef4ff);
       width: 160px;
@@ -177,11 +176,14 @@
       justify-content: center;
       box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.1);
       margin: 0 auto;
+      overflow: hidden; /* penting agar gambar tetap bulat */
     }
 
-    .avatar-circle i {
-      font-size: 70px;
-      color: #1e3a8a;
+    .avatar-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* memastikan foto tidak terdistorsi */
+      display: block;
     }
 
     /* about & cards */
@@ -256,7 +258,6 @@
       margin-bottom: 16px;
     }
 
-    /* daftar poin pengalaman dihapus -> hanya menyisakan teks deskripsi singkat */
     .exp-simple {
       font-size: 0.9rem;
       color: #334155;
@@ -394,6 +395,10 @@
       .nav-links a {
         font-size: 0.8rem;
       }
+      .avatar-circle {
+        width: 130px;
+        height: 130px;
+      }
     }
   </style>
 </head>
@@ -413,8 +418,7 @@
 </nav>
 
 <main>
-  <!-- Hero Section: badge "Edukator & Operator Sekolah" telah dihapus -->
-  <!-- Deskripsi hero yang lama dihapus, diganti dengan kalimat netral -->
+  <!-- Hero Section dengan gambar profil (bisa diganti foto sendiri) -->
   <section id="home" class="section">
     <div class="container hero">
       <div class="hero-content">
@@ -429,18 +433,21 @@
       </div>
       <div class="hero-avatar">
         <div class="avatar-circle">
-          <i class="fas fa-user-graduate"></i>
+          <!-- GAMBAR PROFIL: ganti src dengan foto Anda sendiri (bisa pakai file lokal atau url) -->
+          <!-- Contoh: "foto-saya.jpg" atau "https://example.com/myphoto.jpg" -->
+          <img src="https://via.placeholder.com/160?text=Foto+Profil" alt="Foto Profil Rio Sutrisno" id="profileImage">
+          <!-- Catatan: ganti URL di atas dengan link foto asli Anda -->
         </div>
+        <p style="font-size: 0.7rem; margin-top: 8px; color:#6c757d;">* Ganti foto dengan mengedit atribut src pada tag img di atas</p>
       </div>
     </div>
   </section>
 
-  <!-- About & Biodata: bagian "Misi & Peran" (card kedua) dihapus sesuai permintaan -->
+  <!-- About & Biodata (tanpa Misi & Peran) -->
   <section id="about" class="section" style="background: #fafdff;">
     <div class="container">
       <h2 class="section-title">Profil & Biodata</h2>
       <div class="about-grid">
-        <!-- Hanya tersisa card biodata, card Misi & Peran dihapus -->
         <div class="about-card">
           <div class="info-list">
             <p><i class="fas fa-user"></i> <strong>Nama Lengkap:</strong> RIO SUTRISNO</p>
@@ -458,7 +465,7 @@
     </div>
   </section>
 
-  <!-- Pendidikan & Pengalaman: poin-poin "Mengelola sistem informasi... Integrasi e-learning... Optimalisasi..." telah dihapus -->
+  <!-- Pendidikan & Pengalaman -->
   <section id="education" class="section">
     <div class="container">
       <h2 class="section-title">Pendidikan & Pengalaman</h2>
@@ -488,7 +495,6 @@
             <i class="fas fa-laptop-code" style="margin-right: 8px; color:#1E3A8A;"></i>
             <strong>Tenaga Pendidik (Operator Sekolah)</strong>
             <p style="margin-top: 8px;">Yayasan Pendidikan Nusa Indah · 2022 – Sekarang</p>
-            <!-- Poin-poin yang sebelumnya ada (3 bullet) sudah dihapus total sesuai permintaan -->
             <div class="exp-simple">
               Bertanggung jawab dalam operasional sekolah dan administrasi pendidikan.
             </div>
@@ -498,7 +504,7 @@
     </div>
   </section>
 
-  <!-- Publikasi Jurnal (SINTA) - tidak dihapus -->
+  <!-- Publikasi Jurnal (SINTA) -->
   <section id="publication" class="section" style="background: #fefefe;">
     <div class="container">
       <h2 class="section-title">Publikasi Ilmiah</h2>
@@ -511,7 +517,7 @@
     </div>
   </section>
 
-  <!-- Kontak + Form Kirim Pesan ke WhatsApp (Langsung ke WA) -->
+  <!-- Kontak + Form Kirim Pesan ke WhatsApp -->
   <section id="contact" class="section">
     <div class="container">
       <h2 class="section-title">Hubungi Saya</h2>
